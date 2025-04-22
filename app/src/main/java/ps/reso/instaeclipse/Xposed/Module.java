@@ -92,18 +92,18 @@ public class Module implements IXposedHookLoadPackage, IXposedHookZygoteInit {
             XposedPreferences.reloadPrefs();
 
             // Developer options
-            isDevEnabled = XposedPreferences.getPrefs().getBoolean("enableDev", false);
+            isDevEnabled = XposedPreferences.getPrefs().getBoolean("enableDev", true);
 
             // Ghost mode
-            isGhost_Enabled = XposedPreferences.getPrefs().getBoolean("enableGhostMode", false);
+            isGhost_Enabled = XposedPreferences.getPrefs().getBoolean("enableGhostMode", true);
 
             if (isGhost_Enabled) {
-                isGhost_Seen_Enabled = XposedPreferences.getPrefs().getBoolean("ghostModeSeen", false);
-                isGhost_Typing_Enabled = XposedPreferences.getPrefs().getBoolean("ghostModeTyping", false);
-                isGhost_Screenshot_Enabled = XposedPreferences.getPrefs().getBoolean("ghostModeScreenShot", false);
-                isGhost_View_Once_Enabled = XposedPreferences.getPrefs().getBoolean("ghostModeViewOnce", false);
-                isGhost_Story_Enabled = XposedPreferences.getPrefs().getBoolean("ghostModeStory", false);
-                isGhost_Live_Enabled = XposedPreferences.getPrefs().getBoolean("ghostModeLive", false);
+                isGhost_Seen_Enabled = XposedPreferences.getPrefs().getBoolean("ghostModeSeen", true);
+                isGhost_Typing_Enabled = XposedPreferences.getPrefs().getBoolean("ghostModeTyping", true);
+                isGhost_Screenshot_Enabled = XposedPreferences.getPrefs().getBoolean("ghostModeScreenShot", true);
+                isGhost_View_Once_Enabled = XposedPreferences.getPrefs().getBoolean("ghostModeViewOnce", true);
+                isGhost_Story_Enabled = XposedPreferences.getPrefs().getBoolean("ghostModeStory", true);
+                isGhost_Live_Enabled = XposedPreferences.getPrefs().getBoolean("ghostModeLive", true);
             }
 
             // Distraction free
@@ -118,19 +118,19 @@ public class Module implements IXposedHookLoadPackage, IXposedHookZygoteInit {
             }
 
             // Remove ads
-            isRemove_Ads_Enabled = XposedPreferences.getPrefs().getBoolean("removeAds", false);
+            isRemove_Ads_Enabled = XposedPreferences.getPrefs().getBoolean("removeAds", true);
 
             // Remove analysis
-            isRemove_Analytics_Enabled = XposedPreferences.getPrefs().getBoolean("removeAnalytics", false);
+            isRemove_Analytics_Enabled = XposedPreferences.getPrefs().getBoolean("removeAnalytics", true);
 
             // Misc options
-            is_Misc_Enabled = XposedPreferences.getPrefs().getBoolean("miscOptions", false);
+            is_Misc_Enabled = XposedPreferences.getPrefs().getBoolean("miscOptions", true);
 
             if (is_Misc_Enabled) {
                 isStop_Story_Flipping_Enabled = XposedPreferences.getPrefs().getBoolean("storyFlipping", false);
                 isStop_Video_AutoPlay_Enabled = XposedPreferences.getPrefs().getBoolean("videoAutoPlay", false);
-                isShow_Follower_Toast_Enabled = XposedPreferences.getPrefs().getBoolean("followerToast", false);
-                isShow_Enabled_Features_Enabled = XposedPreferences.getPrefs().getBoolean("enabledHookedToast", false);
+                isShow_Follower_Toast_Enabled = XposedPreferences.getPrefs().getBoolean("followerToast", true);
+                isShow_Enabled_Features_Enabled = XposedPreferences.getPrefs().getBoolean("enabledHookedToast", true);
             }
 
 
